@@ -5,7 +5,7 @@
  * at a published Google Sheet so Richard can update shows without touching code.
  *
  * How to set up Google Sheets:
- * 1. Create a sheet with columns: Title, Date, Location, Link
+ * 1. Create a sheet with columns: Title, Date, Venue, Address, Link
  * 2. File → Share → Publish to web → choose CSV format
  * 3. Paste the published URL into SHOWS_CSV_URL below
  *
@@ -114,8 +114,7 @@ function createShowCard(show) {
     <article class="bg-white rounded-lg shadow-md border-l-4 border-canadian-red p-6 flex flex-col">
       <p class="text-canadian-red font-semibold text-sm uppercase tracking-wide">${date}</p>
       <h3 class="font-display text-xl font-bold text-midnight-blue mt-2">${title}</h3>
-      <p class="text-midnight-blue/70 mt-2 flex-grow">${venue}</p>
-      <p class="text-midnight-blue/70 mt-2 flex-grow">${address}</p>
+      <p class="text-midnight-blue/70 mt-2 flex-grow">${venue}</br>${address}</p>
       ${ticketButton}
     </article>
   `;
