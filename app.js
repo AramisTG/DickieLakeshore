@@ -99,7 +99,8 @@ function upcomingShows(shows) {
 function createShowCard(show) {
   const title = escapeHtml(show.Title);
   const date = escapeHtml(show.Date);
-  const location = escapeHtml(show.Location);
+  const location = escapeHtml(show.Venue);
+  const location = escapeHtml(show.Address);
   const link = escapeHtml(show.Link);
 
   const ticketButton = show.Link
@@ -113,7 +114,8 @@ function createShowCard(show) {
     <article class="bg-white rounded-lg shadow-md border-l-4 border-canadian-red p-6 flex flex-col">
       <p class="text-canadian-red font-semibold text-sm uppercase tracking-wide">${date}</p>
       <h3 class="font-display text-xl font-bold text-midnight-blue mt-2">${title}</h3>
-      <p class="text-midnight-blue/70 mt-2 flex-grow">${location}</p>
+      <p class="text-midnight-blue/70 mt-2 flex-grow">${venue}</p>
+      <p class="text-midnight-blue/70 mt-2 flex-grow">${address}</p>
       ${ticketButton}
     </article>
   `;
