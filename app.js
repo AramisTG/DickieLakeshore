@@ -99,8 +99,8 @@ function upcomingShows(shows) {
 function createShowCard(show) {
   const title = escapeHtml(show.Title);
   const date = escapeHtml(show.Date);
-  const location = escapeHtml(show.Venue);
-  const location = escapeHtml(show.Address);
+  const venue = escapeHtml(show.Venue);
+  const address = escapeHtml(show.Address);
   const link = escapeHtml(show.Link);
 
   const ticketButton = show.Link
