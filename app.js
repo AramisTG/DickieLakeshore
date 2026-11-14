@@ -94,7 +94,7 @@ function upcomingShows(shows) {
 
 /**
  * Build HTML for a single show card.
- * Only shows "Buy Tickets" when the Link column has a value.
+ * Only shows "More Info" when the Link column has a value.
  */
 function createShowCard(show) {
   const title = escapeHtml(show.Title);
@@ -106,7 +106,7 @@ function createShowCard(show) {
   const ticketButton = show.Link
     ? `<a href="${link}" target="_blank" rel="noopener"
          class="inline-block mt-4 bg-canadian-red hover:bg-red-800 text-white font-semibold py-2 px-5 rounded transition-colors text-sm">
-         Buy Tickets
+         More Info
        </a>`
     : '';
 
